@@ -26,7 +26,6 @@ public class BookRepository
             Price = reader.IsDBNull(3) ? null : reader.GetDecimal(3)
         };
     }
-
     // READ: every book, sorted by title.
     public async Task<List<Book>> GetAllAsync()
     {
@@ -57,7 +56,7 @@ public class BookRepository
         command.Parameters.AddWithValue("category", (object?)book.Category ?? DBNull.Value);
         command.Parameters.AddWithValue("price", (object?)book.Price ?? DBNull.Value);
 
-        await command.ExecuteNonQueryAsync();           // runs SQL that returns no rows
+        await command.ExecuteNonQueryAsync();           // runs SQL that returns no rows    
     }
     // READ: one book, or null when no book has that id.
     public async Task<Book?> GetByIdAsync(long id)

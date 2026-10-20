@@ -1,3 +1,40 @@
+:root {
+    --bg: #faf6ef;
+    --ink: #2b2118;
+    --accent: #8a3b2e;
+    --accent-dark: #6b2c22;
+    --card: #ffffff;
+    --radius: 12px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, serif;
+}
+
+.navbar {
+    background: var(--accent) !important;
+}
+
+    .navbar a {
+        color: #fff !important;
+    }
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+    .btn-primary:hover {
+        background: var(--accent-dark);
+    }
+
+.card {
+    border: 0;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
 html {
   font-size: 14px;
 }
@@ -29,3 +66,4 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
